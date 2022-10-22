@@ -163,7 +163,6 @@ class ProjectsController extends BaseController {
 		$pu->user_id	=	$invited_user->id;
 		$pu->save();
 
-		Helpers::sendProjectInviteMail($email, $project_name, $project_url);
 		return $this->setStatusCode(200)->makeResponse('A new member has been added to this project.', $invited_user);
 	}
 
